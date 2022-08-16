@@ -9,7 +9,8 @@ function togglePlay() {
 ```
 
 `video.paused`를 `this.paused`로 바꾸면  
-아래의 `toggle.addEventListener("click", togglePlay);` 때문에 토글버튼은 작동하지 않는다!!
+아래의 `toggle.addEventListener("click", togglePlay);` 때문에 토글버튼은 작동하지 않는다!!  
+
 
 ---
 
@@ -28,14 +29,16 @@ console.log(this.dataset.hello);
 video.currentTime += parseFloat(this.dataset.skip);
 ```
 
-처럼 `this.dataset.*`로 사용하면 된다!!
+처럼 `this.dataset.*`로 사용하면 된다!!  
+
 
 ---
 
 ![image](https://user-images.githubusercontent.com/56066290/184465837-d268788e-4fe7-4015-8a9e-72176ffc9240.png)
 
 - progressbar의 길이(width)가 flexBasis, 즉 현재 재생 구간!
-  `progressBar.style.flexBasis = `${percent}%`;`
+  `progressBar.style.flexBasis = `${percent}%`;`  
+  
 
 ---
 
@@ -48,14 +51,18 @@ video.addEventListener("timeupdate", handleProgress);
 - `timeupdate` 이벤트는 HTMLMediaElement이다.
 - `currentTime` 속성이 변경되었을 때 이벤트가 동작한다!
 - 예를 들어, skip 버튼을 눌렀을 때나 재생중일 때
-- `progress` 이벤트도 비슷하게 동작을 한다 동작한다
-  ***
+- `progress` 이벤트도 비슷하게 동작한다
+  ***  
+  
 - 막대바의 range 조절할 때는 event로 *change*와 *mousemove*를 사용하자!
-  ***
-- video 속성의 `duration`은 해당 비디오의 총 재생시간을 말한다.
-  mdn참고: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
+  ***  
+  
+- video 속성의 `duration`은 해당 비디오의 총 재생시간을 말한다.   
 
-  ***
+  [mdn참고: https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement]
+
+  ***  
+  
 
 - offsetX : 이벤트가 걸려있는 DOM 객체를 기준으로 좌표를 출력
 - clientX: 브라우저가 기준인 좌표. 스크롤은 무시하고 해당 페이지의 상단을 0으로 측정
