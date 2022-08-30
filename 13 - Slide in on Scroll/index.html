@@ -247,15 +247,14 @@
         // 이러한 동작은 매우 비효율적이고, 그래서 디바운스가 필요하다
 
         slideImages.forEach((slideImage) => {
-          console.log(slideImage.offsetParent);
-
-          // 이미지의 절반이 보이는 위치
           const slideInAt =
             window.scrollY + window.innerHeight - slideImage.height / 2;
-
+          console.log(slideInAt);
           // 이미지의 bottom 위치
           const imageBottom = slideImage.offsetTop + slideImage.height;
 
+          console.log(slideInAt);
+          console.log(slideImage.offsetTop);
           // 이미지의 절반 이상이 보이는지
           const isHalfShown = slideInAt > slideImage.offsetTop;
 
