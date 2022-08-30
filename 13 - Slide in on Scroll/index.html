@@ -245,8 +245,11 @@
       function checkSlide(e) {
         // 손가락으로 스크롤을 한번 할때마다 1초에 50번에 로그기 찍히게 된다.
         // 이러한 동작은 매우 비효율적이고, 그래서 디바운스가 필요하다
+        console.count(e);
 
+        console.log(window.scrollY + window.innerHeight);
         slideImages.forEach((slideImage) => {
+<<<<<<< HEAD
           const slideInAt =
             window.scrollY + window.innerHeight - slideImage.height / 2;
           console.log(slideInAt);
@@ -256,9 +259,16 @@
           console.log(slideInAt);
           console.log(slideImage.offsetTop);
           // 이미지의 절반 이상이 보이는지
-          const isHalfShown = slideInAt > slideImage.offsetTop;
+=======
+          // 이미지의 절반정도 스크롤 했을 때
+          const slideInAt =
+            window.scrollY + window.innerHeight - slideImage.height / 2;
 
-          // 아직 스크롤해서 지나가지 않았는지 확인
+          // 이미지의 bottom
+          const imageBottom = slideImage.offsetTop + slideImage.height;
+
+>>>>>>> parent of 67f3834 (feat: debouncing, 스크롤 시 사용하는 프로퍼티 공부)
+          const isHalfShown = slideInAt > slideImage.offsetTop;
           const isNotScrolledPast = window.scrollY < imageBottom;
 
           if (isHalfShown && isNotScrolledPast) {
