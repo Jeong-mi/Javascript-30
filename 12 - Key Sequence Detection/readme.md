@@ -1,6 +1,6 @@
 # Key Sequence Detection
 
-![image](https://user-images.githubusercontent.com/56066290/187349237-a9eb06fa-55df-42c4-885f-b67a94c18b30.png)
+<img src="https://user-images.githubusercontent.com/56066290/187349237-a9eb06fa-55df-42c4-885f-b67a94c18b30.png" width="400" height="400" />
 
 - 키보드 이벤트를 활용한 프로젝트!  
   <br/>
@@ -64,3 +64,7 @@ pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
 
 - start: 음수인 경우 -> 배열의 끝에서부터 시작
 - deleteCount: 값이 배열의 길이-start보다 큰경우 -> start부터 모든 요소 제거
+
+<br/>
+
+> 어렴풋했던 splice 배열 메서드에 대해서 배운 것 같다.
