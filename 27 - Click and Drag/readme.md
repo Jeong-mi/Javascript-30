@@ -2,9 +2,9 @@
 
 <img src="https://user-images.githubusercontent.com/56066290/190089627-e4ed33e8-3551-48cb-af4b-870687f45804.gif" width="250" height="">
 
-## 코드 해석
+<br/>
 
----
+## 코드 해석
 
 1. 클릭했을 때 앵커의 시작점 `startX`는 `e.pageX - slider.offsetLeft;`로 구할 수 있다
 
@@ -56,11 +56,12 @@ slider.scrollLeft = scrollLeft - walk;
 - `scrollLeft` : 마우스를 클릭한 지점의 스크롤 바의 위치
 - 그래서 `scrollLeft`에서 `walk`를 빼준 값이 바뀐 스크롤 바의 위치가 되는 것이다!
 
+<br/>
+
 ## 새롭게 공부한 내용
 
----
+- `element.scrollTop` : 수직 스크롤바의 현재 위치   
+<img src="https://user-images.githubusercontent.com/56066290/190090569-d9264e86-22c5-4623-8834-13b370b3ea82.png" width="200" height="">
 
-- `element.scrollTop` : 수직 스크롤바의 현재 위치
-  <img src="https://user-images.githubusercontent.com/56066290/190090569-d9264e86-22c5-4623-8834-13b370b3ea82.png" width="200" height="">
-- `element.scrollLeft` : 수평 스크롤바의 현재 위치
-  <img src="https://user-images.githubusercontent.com/56066290/190090646-91d4a945-cee0-4696-8481-1eb38ed16e2f.png" width="200" height="">
+- `element.scrollLeft` : 수평 스크롤바의 현재 위치   
+<img src="https://user-images.githubusercontent.com/56066290/190090646-91d4a945-cee0-4696-8481-1eb38ed16e2f.png" width="200" height="">
