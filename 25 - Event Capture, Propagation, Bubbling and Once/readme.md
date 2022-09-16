@@ -15,7 +15,7 @@
 예를 들어서, **`three`에 클릭 이벤트를 발생시키면** `three` -> `two` -> `one` 순서로 요소의 클릭 이벤트 핸들러가 동작하게 된다.
 
 그럼 여기서 각 동작에 대해서 `e.target`과 `e.currentTarget`를 콘솔로 찍어봤을 때,
-<img src="https://user-images.githubusercontent.com/56066290/190588917-cd9ed617-2c57-4a06-85e6-c1184d8b70fc.png" width="200">
+<img src="https://user-images.githubusercontent.com/56066290/190588917-cd9ed617-2c57-4a06-85e6-c1184d8b70fc.png" width="300">
 로 찍혔다. 그래서 이제 두 대상 객체가 어떤 것을 가리키는지 명확하게 이해가 됐다.
 
 - `e.target` : **실제 이벤트를 동작한, 시작한** '타깃'요소! 그렇기 때문에 버블링이 진행되는 동안에도 변하지 않는다.
@@ -78,7 +78,7 @@ element.addEventListener("click", doSomething, {
 });
 ```
 
-- once : true면 해당 요소의 이벤트가 딱 한번만 실행된다!
+- `once : true`면 해당 요소의 이벤트가 딱 한번만 실행된다!
   클릭 후에 `element.removeEventListener("click", doSomething)`을 하는 것과 같다!
   이 옵션은 알아두면 나중에 쓰일 곳이 많아보여서 흥미로웠다! 버튼을 더이상 클릭하지 않기를 바라는 가게 체크아웃 버튼이나, 한번만 실행해야 하는 복잡한 기술을 사용해야 되는 상황에서 유용할 듯 싶다
 
@@ -88,4 +88,7 @@ element.addEventListener("click", doSomething, {
 
 사실 이벤트 캡쳐링이나 버블링의 개념을 어렴풋하게는 알고 있었다. 이론 강의시간이나 이전 프로젝트에서 봤던 개념이었기 때문이다. 하지만 이렇게 짧은 강의와 실습을 하면서 내 방식으로 정리를 하다보니 어렴풋했던 개념이 조금이라도 선명해진 것 같아졌다. 뭔가 더 친해진 느낌? 다음에 프로젝트를 진행하면서 비슷한 개념을 사용해야 할 때 기분좋게 아는 척 정도 할 수 있을 정도? ㅎㅎ..
 
-표준 DOM 이벤트가 정의한 이벤트 흐름 단계도 배우게 됐는데 나중에 모던 JS 책 이벤트 챕터에서 만나면 또 반갑게 읽을 수 있을 것 같다.
+표준 DOM 이벤트가 정의한 이벤트 흐름 단계도 배우게 됐는데 나중에 모던 JS 책 이벤트 챕터에서 만나면 또 반갑게 읽을 수 있을 것 같다.   
+
+
+[참고사이트: https://ko.javascript.info/bubbling-and-capturing]
